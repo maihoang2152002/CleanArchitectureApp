@@ -1,0 +1,169 @@
+2023-12-16 09:01:51.806 +07:00 [INF] Registered 5 endpoints in 1513 milliseconds.
+2023-12-16 09:01:53.113 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2023-12-16 09:01:53.154 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL
+);
+2023-12-16 09:01:53.263 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2023-12-16 09:01:53.284 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status"
+FROM "Contributors" AS "c"
+2023-12-16 09:01:53.351 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2023-12-16 09:01:53.362 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2023-12-16 09:01:53.525 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-16 09:01:53.526 +07:00 [INF] Hosting environment: Development
+2023-12-16 09:01:53.526 +07:00 [INF] Content root path: C:\Learn\Thesis\Demo\CleanArchitectureApp\src\CleanArchitectureApp.Web
+2023-12-16 09:01:53.632 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger - null null
+2023-12-16 09:01:53.807 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - null null
+2023-12-16 09:01:53.814 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger - 302 null null 184.4606ms
+2023-12-16 09:01:54.007 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - 200 null text/html; charset=utf-8 200.1462ms
+2023-12-16 09:01:54.012 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.css - null null
+2023-12-16 09:01:54.012 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-16 09:01:54.019 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 6.2794ms
+2023-12-16 09:01:54.022 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - null null
+2023-12-16 09:01:54.024 +07:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2023-12-16 09:01:54.025 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.css - 200 218 text/css 12.9667ms
+2023-12-16 09:01:54.068 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.4871ms
+2023-12-16 09:01:54.104 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - null null
+2023-12-16 09:01:54.140 +07:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-12-16 09:01:54.561 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 457.3122ms
+2023-12-16 09:03:08.376 +07:00 [INF] Registered 5 endpoints in 322 milliseconds.
+2023-12-16 09:03:08.807 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-12-16 09:03:08.889 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2023-12-16 09:03:08.935 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-16 09:03:08.935 +07:00 [INF] Hosting environment: Development
+2023-12-16 09:03:08.935 +07:00 [INF] Content root path: C:\Learn\Thesis\Demo\CleanArchitectureApp\src\CleanArchitectureApp.Web
+2023-12-16 09:03:08.952 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger - null null
+2023-12-16 09:03:09.026 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - null null
+2023-12-16 09:03:09.032 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger - 302 null null 81.8894ms
+2023-12-16 09:03:09.096 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - 200 null text/html; charset=utf-8 70.6066ms
+2023-12-16 09:03:09.103 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-16 09:03:09.106 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - null null
+2023-12-16 09:03:09.106 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 3.3937ms
+2023-12-16 09:03:09.125 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.8647ms
+2023-12-16 09:03:09.200 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - null null
+2023-12-16 09:03:09.206 +07:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-12-16 09:03:09.459 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 258.4749ms
+2023-12-16 09:04:15.854 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Contributors - null null
+2023-12-16 09:04:15.857 +07:00 [WRN] Failed to determine the https port for redirect.
+2023-12-16 09:04:15.859 +07:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2023-12-16 09:04:15.893 +07:00 [INF] Handling ListContributorsQuery
+2023-12-16 09:04:15.894 +07:00 [INF] Property Skip : null
+2023-12-16 09:04:15.894 +07:00 [INF] Property Take : null
+2023-12-16 09:04:15.952 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name"
+FROM (
+    SELECT Id, Name FROM Contributors
+) AS "c"
+2023-12-16 09:04:15.955 +07:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[CleanArchitectureApp.UseCases.Contributors.ContributorDTO]] in 61 ms
+2023-12-16 09:04:15.968 +07:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2023-12-16 09:04:15.969 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Contributors - 200 null application/json 115.5265ms
+2023-12-16 09:04:22.523 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Contributors/8 - null null
+2023-12-16 09:04:22.525 +07:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2023-12-16 09:04:22.545 +07:00 [INF] Handling GetContributorQuery
+2023-12-16 09:04:22.546 +07:00 [INF] Property ContributorId : 8
+2023-12-16 09:04:22.587 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2023-12-16 09:04:22.587 +07:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[CleanArchitectureApp.UseCases.Contributors.ContributorDTO] in 41 ms
+2023-12-16 09:04:22.588 +07:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2023-12-16 09:04:22.589 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Contributors/8 - 404 null null 67.0063ms
+2023-12-16 09:04:31.301 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Contributors/4 - null null
+2023-12-16 09:04:31.303 +07:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2023-12-16 09:04:31.304 +07:00 [INF] Handling GetContributorQuery
+2023-12-16 09:04:31.304 +07:00 [INF] Property ContributorId : 4
+2023-12-16 09:04:31.307 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2023-12-16 09:04:31.307 +07:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[CleanArchitectureApp.UseCases.Contributors.ContributorDTO] in 2 ms
+2023-12-16 09:04:31.307 +07:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2023-12-16 09:04:31.307 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Contributors/4 - 404 null null 5.8783ms
+2023-12-16 09:04:43.020 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Contributors/2 - null null
+2023-12-16 09:04:43.021 +07:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2023-12-16 09:04:43.023 +07:00 [INF] Handling GetContributorQuery
+2023-12-16 09:04:43.023 +07:00 [INF] Property ContributorId : 2
+2023-12-16 09:04:43.025 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2023-12-16 09:04:43.050 +07:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[CleanArchitectureApp.UseCases.Contributors.ContributorDTO] in 26 ms
+2023-12-16 09:04:43.051 +07:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2023-12-16 09:04:43.051 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Contributors/2 - 200 null application/json 31.0705ms
+2023-12-16 09:04:49.537 +07:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57678/Contributors/1 - null null
+2023-12-16 09:04:49.538 +07:00 [INF] Executing endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-12-16 09:04:49.541 +07:00 [INF] Handling DeleteContributorCommand
+2023-12-16 09:04:49.541 +07:00 [INF] Property ContributorId : 1
+2023-12-16 09:04:49.544 +07:00 [INF] Deleting Contributor 1
+2023-12-16 09:04:49.556 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__p_0
+LIMIT 1
+2023-12-16 09:04:49.590 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Contributors"
+WHERE "Id" = @p0
+RETURNING 1;
+2023-12-16 09:04:49.602 +07:00 [INF] Handling Contributed Deleted event for 1
+2023-12-16 09:04:49.604 +07:00 [INF] Handled DeleteContributorCommand with Ardalis.Result.Result in 62 ms
+2023-12-16 09:04:49.605 +07:00 [INF] Executed endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-12-16 09:04:49.608 +07:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57678/Contributors/1 - 204 null null 71.011ms
+2023-12-16 09:05:17.774 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Contributors - null null
+2023-12-16 09:05:17.776 +07:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2023-12-16 09:05:17.777 +07:00 [INF] Handling ListContributorsQuery
+2023-12-16 09:05:17.777 +07:00 [INF] Property Skip : null
+2023-12-16 09:05:17.777 +07:00 [INF] Property Take : null
+2023-12-16 09:05:17.783 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name"
+FROM (
+    SELECT Id, Name FROM Contributors
+) AS "c"
+2023-12-16 09:05:17.783 +07:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[CleanArchitectureApp.UseCases.Contributors.ContributorDTO]] in 5 ms
+2023-12-16 09:05:17.783 +07:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2023-12-16 09:05:17.784 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Contributors - 200 null application/json 37.4725ms
+2023-12-16 09:05:18.285 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Contributors - null null
+2023-12-16 09:05:18.286 +07:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2023-12-16 09:05:18.287 +07:00 [INF] Handling ListContributorsQuery
+2023-12-16 09:05:18.287 +07:00 [INF] Property Skip : null
+2023-12-16 09:05:18.287 +07:00 [INF] Property Take : null
+2023-12-16 09:05:18.287 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name"
+FROM (
+    SELECT Id, Name FROM Contributors
+) AS "c"
+2023-12-16 09:05:18.288 +07:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[CleanArchitectureApp.UseCases.Contributors.ContributorDTO]] in 0 ms
+2023-12-16 09:05:18.288 +07:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2023-12-16 09:05:18.288 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Contributors - 200 null application/json 3.443ms
+2023-12-16 09:05:18.853 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Contributors - null null
+2023-12-16 09:05:18.853 +07:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2023-12-16 09:05:18.854 +07:00 [INF] Handling ListContributorsQuery
+2023-12-16 09:05:18.854 +07:00 [INF] Property Skip : null
+2023-12-16 09:05:18.854 +07:00 [INF] Property Take : null
+2023-12-16 09:05:18.855 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name"
+FROM (
+    SELECT Id, Name FROM Contributors
+) AS "c"
+2023-12-16 09:05:18.855 +07:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[CleanArchitectureApp.UseCases.Contributors.ContributorDTO]] in 1 ms
+2023-12-16 09:05:18.856 +07:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2023-12-16 09:05:18.856 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Contributors - 200 null application/json 3.6514ms
